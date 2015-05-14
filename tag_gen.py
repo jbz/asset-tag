@@ -23,7 +23,7 @@ existing = []
 if args.exclude:
   currentlist = args.exclude
   with open(currentlist) as f:
-	existing = [re.split('_', tag) for tag in f.read().splitlines()]
+	existing = [re.split('\s|_|,|\.|/|\+', tag) for tag in f.read().splitlines()]
 #  print existing
 
 
